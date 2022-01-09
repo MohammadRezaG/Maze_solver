@@ -12,7 +12,9 @@
 
 ## keys
 **C**  clear
+
 **E** placing  **END**
+
 **S** placing **START**
 	
 inspired by [Tech With Tim video](https://youtu.be/JtiK0DOeI4A)
