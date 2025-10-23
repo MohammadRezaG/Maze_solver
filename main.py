@@ -1,3 +1,4 @@
+from linecache import cache
 import pygame
 from queue import PriorityQueue
 
@@ -185,14 +186,20 @@ def draw(screen, grid, rows, width):
 
 
 def get_clicked_cell(pos, grid, rows, width):
-    gap = width // rows
-    x, y = pos
+    try:
+        gap = width // rows
+        x, y = pos
 
-    if x >= 800:
-        x = 799
+        if x >= 800:
+            x = 799
+            
+        if y >= 800:
+            y = 799
 
-    row = x // gap
-    col = y // gap
+        row = x // gap
+        col = y // gap
+    except :
+        return grid[50][50]
 
     return grid[row][col]
 
